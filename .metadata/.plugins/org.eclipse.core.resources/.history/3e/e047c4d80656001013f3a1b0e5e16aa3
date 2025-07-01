@@ -1,0 +1,5 @@
+package com.appacademia.model;
+
+public class Aluno {
+
+}

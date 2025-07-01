@@ -1,0 +1,83 @@
+package com.weg.suplementos.services;
+import com.weg.suplementos.model.Suplementos;
+import com.weg.suplementos.view.View;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Services {
+	
+	List<Suplementos> meusSuplementos = new ArrayList<>();
+	
+	View view = new View();
+	
+	public void gerenciarSuplementos(int escolhaMenu) {
+		switch(escolhaMenu) {
+		case 1 -> {
+				cadastrarSuplemento();
+			}
+		
+		case 2 -> {
+				int listarEscolha = view.listarEscolha();
+				
+				if(listarEscolha == 1) {
+					view.listarTudo(meusSuplementos);
+					
+				}else if(listarEscolha == 2) {
+					view.listarPorNome(meusSuplementos);
+					
+				}
+			}
+		
+		// FAZER EDIÇÃO
+		
+		case 4 -> {
+				String nomeSuplemento = view.removerSuplemento(meusSuplementos);
+				
+				deletarSuplemento(nomeSuplemento);
+			}
+		
+		case 5 -> {
+				int cont = contarCadastros();
+				
+				view.qtdCadastros(cont);
+			}
+		}
+		
+	}
+	
+	public void cadastrarSuplemento() {
+		String nomeSuplemento = view.cadastrarNome();
+		
+		double preco = view.cadastrarPreco();
+		
+		int quantidade = view.cadastrarQuantidade();
+		
+		String marca = view.cadastrarMarca();
+		
+		Suplementos suplemento = new Suplementos(nomeSuplemento, preco, quantidade, marca);
+		
+		meusSuplementos.add(suplemento);
+		
+	}
+	
+	public void deletarSuplemento(String nomeSuplemento) {
+		for(Suplementos i : meusSuplementos) {
+			if(i.getNome().equalsIgnoreCase(nomeSuplemento)) {
+				meusSuplementos.remove(i);
+			}
+		}
+	}
+	
+	public int contarCadastros() {
+		int cont = 0;
+		
+		while(cont < meusSuplementos.size()) {
+			cont++;
+		}
+		
+		return cont;
+		
+	}
+	
+}

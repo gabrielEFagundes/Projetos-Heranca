@@ -1,0 +1,30 @@
+package com.weg.appclinica;
+
+import java.util.Scanner;
+import com.weg.appclinica.model.Medico;
+import com.weg.appclinica.model.Paciente;
+import com.weg.appclinica.service.CadastroService;
+
+public class App {
+	
+	public static void main(String [] args) {
+		
+		Medico medico = new Medico();
+		Paciente paciente = new Paciente();
+		CadastroService cadastro = new CadastroService();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("\n+====== CADASTRO PACIENTE ======+");
+		cadastro.cadastrarPaciente(scan);
+		
+		System.out.println("\n\n+====== CADASTRO MÉDICO ======+");
+		cadastro.cadastrarMedico(scan);
+		
+		System.out.println("\n\n+====== DADOS CADASTRADOS ======+\n");
+		medico.mostrarMedico();
+		System.out.println();
+		paciente.mostrarPaciente();
+		
+	}
+
+}

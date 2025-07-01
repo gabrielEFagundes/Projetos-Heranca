@@ -1,0 +1,10 @@
+package com.appcinema.services;
+
+import java.util.Scanner;
+
+import com.appcinema.model.Funcionario;
+import com.appcinema.model.Cliente;
+
+public class VendedorIngresso {
+
+}

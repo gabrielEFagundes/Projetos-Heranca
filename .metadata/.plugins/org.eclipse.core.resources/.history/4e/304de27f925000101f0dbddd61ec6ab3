@@ -1,0 +1,75 @@
+package com.weg.cursos.view;
+import com.weg.cursos.services.Services;
+import com.weg.cursos.model.Curso;
+
+import java.util.Scanner;
+
+public class View {
+	
+	Scanner scan = new Scanner(System.in);
+
+	public int mainMenu() {
+		
+		System.out.println("\n+ ===== Menu Principal ===== +"
+				+ "\n1- Cadastrar curso: "
+				+ "\n2- Listar cursos"
+				+ "\n3- Remover curso pelo nome"
+				+ "\n4- Buscar curso por nome"
+				+ "\n5- Editar curso"
+				+ "\n6- Mostrar total de cursos cadastrados"
+				+ "\nSua escolha: ");
+		
+		int escolha = scan.nextInt();
+		
+		return escolha;
+		
+	}
+	
+	public String cadastrarNome() {
+		System.out.println("\nDigite o nome do curso: ");
+		String nomeCurso = scan.nextLine();
+		
+		return nomeCurso;
+	}
+	
+	public int cadastrarDuracao() {
+		System.out.println("\nDigite a duração do curso: ");
+		int duracaoCurso = scan.nextInt();
+		
+		return duracaoCurso;
+	}
+	
+	public String cadastrarNivel() {
+		System.out.println("\nDigite o nível do curso (ex: Avançado, Intermediário, etc...): ");
+		String nivelCurso = scan.nextLine();
+		
+		return nivelCurso;
+	}
+	
+	public int cadastrarVagas() {
+		System.out.println("\nDigite a quantidade de vagas para o curso: ");
+		int vagasCurso = scan.nextInt();
+		
+		return vagasCurso;
+	}
+	
+	public int listarEscolha() {
+		System.out.println("\nO que você deseja visualizar?"
+				+ "\n1- Todos os cursos"
+				+ "\n2- Cursos pelo nome"
+				+ "Sua escolha: ");
+		
+		int escolhaListagem = scan.nextInt();
+		
+		return escolhaListagem;
+	}
+	
+	public void listarTudo() {
+		System.out.println("Nome\t\tDuração\t\tNível\t\tVagas");
+		
+		for(Cursos i : meusCursos) {
+			
+		}
+	}
+	
+}

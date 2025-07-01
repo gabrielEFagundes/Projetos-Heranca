@@ -1,0 +1,5 @@
+package com.weg.appclinica.model;
+
+public class CadastroService {
+
+}

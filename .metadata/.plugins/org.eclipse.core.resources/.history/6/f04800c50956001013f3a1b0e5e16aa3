@@ -1,0 +1,5 @@
+package com.appcinema.model;
+
+public class Funcionario {
+
+}

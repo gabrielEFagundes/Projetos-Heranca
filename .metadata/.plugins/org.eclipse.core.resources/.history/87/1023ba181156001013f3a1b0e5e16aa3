@@ -1,0 +1,10 @@
+package com.ong.services;
+
+import java.util.Scanner;
+
+import com.ong.model.Coordenador;
+import com.ong.model.Voluntario;
+
+public class StockONG {
+
+}

@@ -1,0 +1,26 @@
+package com.weg.cursos.view;
+
+import java.util.Scanner;
+
+public class View {
+	
+	Scanner scan = new Scanner(System.in);
+
+	public int mainMenu() {
+		
+		System.out.println("\n+ ===== Menu Principal ===== +"
+				+ "\n1- Cadastrar curso: "
+				+ "\n2- Listar cursos"
+				+ "\n3- Remover curso pelo nome"
+				+ "\n4- Buscar curso por nome"
+				+ "\n5- Editar curso"
+				+ "\n6- Mostrar total de cursos cadastrados"
+				+ "\nSua escolha: ");
+		
+		int escolha = scan.nextInt();
+		
+		return escolha;
+		
+	}
+	
+}

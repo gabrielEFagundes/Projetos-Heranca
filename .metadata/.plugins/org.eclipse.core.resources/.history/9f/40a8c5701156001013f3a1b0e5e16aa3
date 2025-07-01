@@ -1,0 +1,17 @@
+package com.ong;
+
+import java.util.Scanner;
+
+import com.ong.model.Coordenador;
+import com.ong.model.Voluntario;
+import com.ong.services.StockONG;
+
+public class App {
+	
+	public static void main(String [] args) {
+		
+		
+		
+	}
+
+}

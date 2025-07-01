@@ -1,0 +1,10 @@
+package com.loja.services;
+
+import java.util.Scanner;
+
+import com.loja.model.Cliente;
+import com.loja.model.Vendedor;
+
+public class CadastroClientes {
+
+}

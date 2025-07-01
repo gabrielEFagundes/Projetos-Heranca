@@ -1,0 +1,26 @@
+package com.weg.suplementos.view;
+
+import java.util.Scanner;
+
+public class View {
+	
+	Scanner scan = new Scanner(System.in);
+	
+	public int menuPrincipal() {
+		
+		System.out.println("\n===== Suplementos G.O.A.T ====="
+				+ "\n1- Cadastrar suplemento"
+				+ "\n2- Listar suplementos"
+				+ "\n3- Editar suplementos"
+				+ "\n4- Remover suplementos pelo nome"
+				+ "\n5- Contar livros cadastrados"
+				+ "\n0- Sair do sistema"
+				+ "\nSua escolha: ");
+		
+		int escolha = scan.nextInt();
+		
+		return escolha;
+		
+	}
+
+}
