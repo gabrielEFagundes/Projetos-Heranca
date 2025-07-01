@@ -1,7 +1,0 @@
-package com.petshop.model;
-
-public class Dono extends Pessoa{
-
-	private 
-	
-}
