@@ -39,23 +39,31 @@ public class Gerenciamento {
 				int escolhaVer = visual.mostrarEscolha();
 				
 				if(escolhaVer == 1) {
-					int voltar = visual.mostrarDonos(dono, donos);
+					String temp = visual.mostrarDonos(dono, donos);
 					
-					if(voltar == 0) {
-						Thread.sleep(2000);
-						System.out.flush();
-						visual.limpa();
-					}
+					Thread.sleep(500);
+					System.out.flush();
+					visual.limpa();
 					
 				}else if(escolhaVer == 2) {
-					int voltar = visual.mostrarVets(vet, vets);
+					String temp = visual.mostrarVets(vet, vets);
 					
-					if(voltar == 0) {
-						Thread.sleep(2000);
-						System.out.flush();
-						visual.limpa();
-					}
+					Thread.sleep(500);
+					System.out.flush();
+					visual.limpa();
+					
 				}
+			}
+		case 3 -> { // edição
+				
+			}
+		case 4 -> { // deletação
+				
+			}
+		case 5 -> { // reinicialização
+				
+			}
+		case 0 -> { // saída
 				
 			}
 		}

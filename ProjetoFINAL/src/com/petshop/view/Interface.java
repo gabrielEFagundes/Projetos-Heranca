@@ -83,8 +83,7 @@ public class Interface {
 		return escolha;
 	}
 	
-	// TODO: Mudar o input de retorno para que ele aceite qualquer tecla além de 0
-	public int mostrarDonos(Dono dono, List<Dono> donos) {
+	public String mostrarDonos(Dono dono, List<Dono> donos) {
 		int cont = 1;
 		
 		System.out.println("\n\tNome\t\tTelefone\t\tNome do Pet");
@@ -93,23 +92,23 @@ public class Interface {
 			cont++;
 		}
 		System.out.println();
-		System.out.println("Digite 0 para voltar.");
-		int voltar = scan.nextInt();
+		System.out.println("Pressione qualquer tecla para retornar.");
+		String voltar = scan.next();
 		
 		return voltar;
 	}
 	
-	public int mostrarVets(Veterinario veterinario, List<Veterinario> vets) {
+	public String mostrarVets(Veterinario veterinario, List<Veterinario> vets) {
 		int cont = 1;
 		
 		System.out.println("\n\tNome\t\tTelefone\t\tRegistro");
 		for(Veterinario i : vets) {
-			System.out.printf("%d- \t%s\t\t%s\t\t%s\n", cont, i.getNome(), i.getTelefone(), i.getRegistroProfissional());
+			System.out.printf("%d- \t%s\t\t%s\t\t\t%s\n", cont, i.getNome(), i.getTelefone(), i.getRegistroProfissional());
 			cont++;
 		}
 		System.out.println();
-		System.out.println("Digite 0 para voltar.");
-		int voltar = scan.nextInt();
+		System.out.println("Pressione qualquer tecla para retornar.");
+		String voltar = scan.next();
 		
 		return voltar;
 	}
